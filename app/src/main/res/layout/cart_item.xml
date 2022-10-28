@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="4dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+       >
+
+        <ImageView
+            android:id="@+id/image_cart_item"
+            android:layout_width="122dp"
+            android:layout_height="122dp"
+            android:src="@drawable/katya_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_cart_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ozdoba Michelle"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_black"
+            app:layout_constraintEnd_toStartOf="@+id/price_cart_item"
+            app:layout_constraintStart_toEndOf="@+id/image_cart_item"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/color_cart_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kolor: niebieski "
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/price_cart_item"
+            app:layout_constraintStart_toEndOf="@+id/image_cart_item"
+            app:layout_constraintTop_toBottomOf="@+id/title_cart_item" />
+
+        <TextView
+            android:id="@+id/price_cart_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="999zł"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/quantinty_cart_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="ilość: 999"
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toStartOf="@+id/price_cart_item"
+            app:layout_constraintStart_toEndOf="@+id/image_cart_item"
+            app:layout_constraintTop_toBottomOf="@+id/color_cart_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/line_straight_solid"/>
+</LinearLayout>
