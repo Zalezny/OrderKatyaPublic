@@ -1,3 +1,4 @@
+/*
 package com.example.orderappkatya.services
 
 import android.app.PendingIntent
@@ -64,4 +65,4 @@ class NotificationService : FirebaseMessagingService() {
         }
     }
 
-}
+}*/

@@ -42,6 +42,7 @@ class CurrentFragment : Fragment() {
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var currAdapter : OrdersAdapter
     private lateinit var currRestartTextView : TextView
+    private lateinit var currentLimitRequestTextView : TextView
     private lateinit var currRestartButton : Button
 
     private var lastPosition : Int = 0
@@ -96,6 +97,8 @@ class CurrentFragment : Fragment() {
         //Button when is need restart
         currRestartButton = view.findViewById(R.id.current_restart_button_no_orders)
 
+        currentLimitRequestTextView = view.findViewById(R.id.current_text_view_limit_request)
+
 
     }
 
@@ -114,6 +117,7 @@ class CurrentFragment : Fragment() {
         progressBar.visibility = View.VISIBLE
         currRestartButton.visibility = View.GONE
         currRestartTextView.visibility = View.GONE
+        currentLimitRequestTextView.visibility = View.GONE
 
         //Function is ansych, so we have to predicted this
         okHttpClient.newCall(request).enqueue(object : Callback {
@@ -130,7 +134,12 @@ class CurrentFragment : Fragment() {
                 if(response.message.isNullOrBlank()  && (!body.isNullOrBlank())) {
 
                     response.apply {
-                        if (!response.isSuccessful) throw IOException("Unexpected code $response")
+                        if (!response.isSuccessful) {
+
+                            activity!!.runOnUiThread{ currentLimitRequestTextView.visibility = View.VISIBLE }
+
+                            throw IOException("Unexpected code $response")
+                        }
 
 
                         //Create intent and put here body for ItemActivity if will be open

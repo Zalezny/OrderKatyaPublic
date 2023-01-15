@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), Communicator, RefreshCom {
 
 
 
-        FirebaseMessaging.getInstance().token
+        /*FirebaseMessaging.getInstance().token
             .addOnCompleteListener(OnCompleteListener { task ->
                 if (!task.isSuccessful) {
                     return@OnCompleteListener
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), Communicator, RefreshCom {
                     msg = "Subscription failed"
                 }
                 Log.d("Subscription", "$msg")
-            }
+            }*/
 
         //Code of ViewPager (slashing between CURRENT and ARCHIVE)
         val tabLayout : TabLayout = findViewById(R.id.tab_layout)

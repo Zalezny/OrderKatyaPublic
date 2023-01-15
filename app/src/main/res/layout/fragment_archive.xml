@@ -37,6 +37,23 @@
 
             <TextView
 
+                android:id="@+id/archive_text_view_limit_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="Przekroczono liczbe zapytań do bazy.
+                Spróbuj ponownie później"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.45"
+                android:visibility="gone"/>
+
+            <TextView
+
                 android:id="@+id/archive_text_view_restart_no_orders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

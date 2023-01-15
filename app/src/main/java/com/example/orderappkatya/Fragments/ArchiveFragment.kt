@@ -38,6 +38,7 @@ class ArchiveFragment : Fragment() {
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var adapter: OrdersAdapter
     private lateinit var archiveRestartTextView: TextView
+    private lateinit var archiveLimitRequestTextView: TextView
     private lateinit var archiveRestartButton: Button
 
     private var lastPosition : Int = 0
@@ -95,6 +96,8 @@ class ArchiveFragment : Fragment() {
         //When is need restart
         archiveRestartButton = view.findViewById(R.id.archive_restart_button_no_orders)
 
+        archiveLimitRequestTextView = view.findViewById(R.id.archive_text_view_limit_request)
+
     }
     fun refreshData() {
         getOrdersData()
@@ -121,6 +124,7 @@ class ArchiveFragment : Fragment() {
         archiveProgressBar.visibility = View.VISIBLE
         archiveRestartButton.visibility = View.GONE
         archiveRestartTextView.visibility = View.GONE
+        archiveLimitRequestTextView.visibility = View.GONE
 
         //Function is asynch, so we have to predicted this
         okHttpClient.newCall(request).enqueue(object : Callback {
@@ -135,7 +139,12 @@ class ArchiveFragment : Fragment() {
                 val body = response.body!!.string()
                 if(response.message.isNullOrBlank() && (!body.isNullOrBlank())) {
                     response.apply {
-                        if (!response.isSuccessful) throw IOException("Unexpected code $response")
+                        if (!response.isSuccessful)
+                        {
+                            activity!!.runOnUiThread{ archiveLimitRequestTextView.visibility = View.VISIBLE }
+
+                            throw IOException("Unexpected code $response")
+                        }
 
 
                         //Create intent and put here body for ItemActivity if will be open
