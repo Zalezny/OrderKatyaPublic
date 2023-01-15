@@ -1,7 +1,10 @@
 # OrderKatya
 This is a Kotlin project with Android SDK done. I use here: okhttp3, firebase-messaging, material design, gson, jackson, picasso, viewmodel
 ## Getting Started
-You can clone that's app in Android Studio, but unfortuntely you cannot start that's app because it's missing two files: with const database and google-services. That's reason is security app. But dont worry, I'm working with Backender to create 'test' server.
+~~You can clone that's app in Android Studio, but unfortuntely you cannot start that's app because it's missing two files: with const database and google-services. That's reason is security app. But dont worry, I'm working with Backender to create 'test' server.~~
+
+You can clone the app in Android Studio. It use a test server to work. Unfortuntely the notifications are disabled, because there is no option in the app add new orders (viewing only), but don't worry, I work on this option
+
 ## Information
 Project was created for company  [Katya RG Leotards](https://katya-rg.eu/) for helps in  management the orders. This app is connected with database and read from API informations about orders and informations about customers. Receive the notifications for every State, when app is turn off, turn on or in foreground.
 
