@@ -17,14 +17,17 @@ Picture's are loading with [Picasso](https://square.github.io/picasso/)
 
 When turned on, the application shows MainActivity with Fragments. The first fragment has recycler view with active customer orders. The second fragment has RV with archive orders (realized). The blue exclamation point inform that order is new. After clicking on the notification, you will be taken to the application with Activity wihich contains information about the order.
 
+<p float="left" align="center">
 
-<p float="left">
-<img src="https://user-images.githubusercontent.com/65240240/198530797-35e8fe91-2a81-40d9-9032-4a940351335e.png" alt="orderListImage" width="500"/>
-<img src="https://user-images.githubusercontent.com/65240240/198531444-437728f8-64a9-4343-8192-53ea150c1a79.png" alt="orderListImage" width="500"/>
-
+<!---<img src="https://user-images.githubusercontent.com/65240240/198530797-35e8fe91-2a81-40d9-9032-4a940351335e.png" alt="orderListImage" width="500"/>
+<img src="https://user-images.githubusercontent.com/65240240/198531444-437728f8-64a9-4343-8192-53ea150c1a79.png" alt="orderListImage" width="500"/>--->
+<img src="https://github.com/Zalezny/OrderKatyas/assets/65240240/167befb8-6ffd-48c6-8d49-825446fd56d5" alt="orderListImage" width="300"/>
+&nbsp;
+<img src="https://github.com/Zalezny/OrderKatyas/assets/65240240/1813dcad-8672-4139-a35a-0585e5a29c25" alt="orderListImage" width="300"/>
 </p>
 
 The next Activity displays the information about the selected order. It has the ability to change the order status from active to archived and vice versa. Items has inside recycler view. So when are more products, the view changes size by itself.
-<p align="center">
-<img src="https://user-images.githubusercontent.com/65240240/198532379-77b19660-bb3f-4cc6-906e-452996444cfa.png" alt="orderListImage" width="500"/>
+<p align="center" align ="center">
+<!-- <img src="https://user-images.githubusercontent.com/65240240/198532379-77b19660-bb3f-4cc6-906e-452996444cfa.png" alt="orderListImage" width="500"/> -->
+  <img src="https://github.com/Zalezny/OrderKatyas/assets/65240240/9d75012c-0037-4578-85d2-54a614919590" alt="orderListImage" width="300"/>
 </p>
